@@ -166,5 +166,5 @@ pre {
 }
 
 .md-typeset table:not([class]) th {
-  background-color: var(--md-default-bg-color--lightest);
+  background-color: var(--md-default-bg-color--lightest)
 }
