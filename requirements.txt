@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+httpx
+numpy
+xarray
+cfgrib
+matplotlib
+cartopy
+scipy
+jinja2
+python-multipart
+h5netcdf
+geojson
+scipy
+requests
+Pillow

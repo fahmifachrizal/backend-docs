@@ -1,0 +1,74 @@
+site_name: CalTracker Documentation
+site_description: Technical documentation for the CalTracker application.
+site_author: Fahmi
+site_url: https://backend-docs.web.app
+
+repo_name: backend-docs
+repo_url: https://github.com/fahmifachrizal/backend-docs
+
+theme:
+  name: material
+  language: en
+  # logo: assets/logo.png
+  # favicon: assets/favicon.ico
+
+  # 1. Clean Typography
+  font:
+    text: Roboto
+    code: JetBrains Mono
+
+  features:
+    - navigation.instant        # Loads pages without refreshing (SPA feel)
+    - navigation.tracking       # URL changes as you scroll
+    - navigation.tabs           # Top-level tabs for major sections
+    - navigation.tabs.sticky    # Tabs stay visible when scrolling
+    - navigation.sections       # bold section headers in sidebar
+    - navigation.expand         # <--- ALLOWS SIDEBAR COLLAPSING/EXPANDING
+    - navigation.indexes        # CRITICAL: Makes "Tables" clickable
+    - navigation.top            # "Back to Top" button
+    - navigation.path           # Breadcrumbs at the top of the page
+    - search.suggest            # Intelligent search suggestions
+    - search.highlight          # Highlight search terms in result
+    - content.code.copy         # Copy button for code blocks
+    - content.tooltips          # Hover tooltips
+
+  # 2. Refined Color Palettes
+  palette:
+    - scheme: default
+      primary: custom  # We define this in CSS (GitHub Dark Header)
+      accent: custom   # We define this in CSS (GitHub Blue)
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: custom  # We define this in CSS (GitHub Dark Mode Blue)
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+nav:
+  - Home:
+      - index.md
+
+
+markdown_extensions:
+  - admonition                # Warning/Note blocks
+  - attr_list                 # Allows adding classes to elements
+  - md_in_html
+  - pymdownx.details          # Collapsible "Details" blocks
+  - pymdownx.superfences      # Nesting code blocks inside other blocks
+  - pymdownx.tabbed:          # Content tabs (e.g., Mac vs Windows instructions)
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+plugins:
+  - search
+
+extra_css:
+  - stylesheets/extra.css
