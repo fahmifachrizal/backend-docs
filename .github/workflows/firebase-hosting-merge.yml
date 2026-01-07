@@ -32,6 +32,5 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_BACKEND_DOCS_A67E3 }}
-          channelId: live
-          projectId: backend-docs-a67e3
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_BACKEND_COLLECTION }}
+          projectId: backend-collection
