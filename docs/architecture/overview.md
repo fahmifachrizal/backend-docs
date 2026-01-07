@@ -149,20 +149,27 @@ These constraints ensure the system remains understandable, comparable, and main
 At a high level, request flow follows this structure:
 
 ```mermaid
-flowchart TB
-  Client["Client (API Consumer)"]
-  API["API Layer\n(Controllers / Routes)"]
-  Auth["Authentication & Authorization"]
-  Service["Service Layer\n(Business Logic)"]
-  Data["Data Access Layer\n(Models / Repositories)"]
-  DB["Relational Database"]
+flowchart LR
+  subgraph API
+    C[Controller]
+    M[Middleware]
+  end
 
-  Client --> API
-  API --> Auth
-  Auth --> API
-  API --> Service
-  Service --> Data
-  Data --> DB
+  subgraph Core
+    S[Service]
+    R[Repository]
+  end
+
+  C --> M --> S --> R --> DB[(Database)]
+```
+
+```mermaid
+sequenceDiagram
+  autonumber
+  Client->>API: Request + JWT
+  API->>Auth: Verify token
+  Auth-->>API: User context
+  API->>Service: Execute action
 ```
 
 Cross-cutting concerns such as authentication, caching, logging, and error handling are applied consistently across all layers.

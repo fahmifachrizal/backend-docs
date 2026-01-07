@@ -701,10 +701,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#summary-diagram-textual" class="md-nav__link">
+  <a href="#summary-diagram" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Summary Diagram (Textual)
+        Summary Diagram
       
     </span>
   </a>
@@ -3902,10 +3902,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#summary-diagram-textual" class="md-nav__link">
+  <a href="#summary-diagram" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Summary Diagram (Textual)
+        Summary Diagram
       
     </span>
   </a>
@@ -4124,22 +4124,26 @@ Inter-module communication occurs via in-process calls, not network requests.</p
 </ul>
 <p>These constraints ensure the system remains understandable, comparable, and maintainable.</p>
 <hr />
-<h2 id="summary-diagram-textual">Summary Diagram (Textual)<a class="headerlink" href="#summary-diagram-textual" title="Permanent link">&para;</a></h2>
+<h2 id="summary-diagram">Summary Diagram<a class="headerlink" href="#summary-diagram" title="Permanent link">&para;</a></h2>
 <p>At a high level, request flow follows this structure:</p>
-<pre class="mermaid"><code>flowchart TB
-  Client["Client (API Consumer)"]
-  API["API Layer\n(Controllers / Routes)"]
-  Auth["Authentication &amp; Authorization"]
-  Service["Service Layer\n(Business Logic)"]
-  Data["Data Access Layer\n(Models / Repositories)"]
-  DB["Relational Database"]
+<pre class="mermaid"><code>flowchart LR
+  subgraph API
+    C[Controller]
+    M[Middleware]
+  end
 
-  Client --&gt; API
-  API --&gt; Auth
-  Auth --&gt; API
-  API --&gt; Service
-  Service --&gt; Data
-  Data --&gt; DB</code></pre>
+  subgraph Core
+    S[Service]
+    R[Repository]
+  end
+
+  C --&gt; M --&gt; S --&gt; R --&gt; DB[(Database)]</code></pre>
+<pre class="mermaid"><code>sequenceDiagram
+  autonumber
+  Client-&gt;&gt;API: Request + JWT
+  API-&gt;&gt;Auth: Verify token
+  Auth--&gt;&gt;API: User context
+  API-&gt;&gt;Service: Execute action</code></pre>
 <p>Cross-cutting concerns such as authentication, caching, logging, and error handling are applied consistently across all layers.</p>
 <hr />
 
