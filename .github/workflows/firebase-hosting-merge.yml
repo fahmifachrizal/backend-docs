@@ -33,4 +33,5 @@ jobs:
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_BACKEND_COLLECTION }}
+          channelId: live
           projectId: backend-collection
