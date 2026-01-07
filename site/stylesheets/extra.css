@@ -152,7 +152,7 @@ pre {
 .md-typeset summary {
   background-color: transparent;
   border-bottom: 1px solid var(--md-default-fg-color--lightest);
-  font-weight: 600;
+  font-weight: 600
 }
 
 /* -------------------------------------------------------------------------
@@ -166,5 +166,5 @@ pre {
 }
 
 .md-typeset table:not([class]) th {
-  background-color: var(--md-default-bg-color--lightest);
+  background-color: var(--md-default-bg-color--lightest)
 }

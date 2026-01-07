@@ -1,7 +1,7 @@
-site_name: CalTracker Documentation
-site_description: Technical documentation for the CalTracker application.
+site_name: Backends Documentation
+site_description: Technical documentation for the backends application.
 site_author: Fahmi
-site_url: https://backend-docs.web.app
+site_url: https://backend-collection.web.app
 
 repo_name: backend-docs
 repo_url: https://github.com/fahmifachrizal/backend-docs
@@ -18,47 +18,144 @@ theme:
     code: JetBrains Mono
 
   features:
-    - navigation.instant        # Loads pages without refreshing (SPA feel)
-    - navigation.tracking       # URL changes as you scroll
-    - navigation.tabs           # Top-level tabs for major sections
-    - navigation.tabs.sticky    # Tabs stay visible when scrolling
-    - navigation.sections       # bold section headers in sidebar
-    - navigation.expand         # <--- ALLOWS SIDEBAR COLLAPSING/EXPANDING
-    - navigation.indexes        # CRITICAL: Makes "Tables" clickable
-    - navigation.top            # "Back to Top" button
-    - navigation.path           # Breadcrumbs at the top of the page
-    - search.suggest            # Intelligent search suggestions
-    - search.highlight          # Highlight search terms in result
-    - content.code.copy         # Copy button for code blocks
-    - content.tooltips          # Hover tooltips
+    - navigation.instant # Loads pages without refreshing (SPA feel)
+    - navigation.tracking # URL changes as you scroll
+    - navigation.tabs # Top-level tabs for major sections
+    - navigation.tabs.sticky # Tabs stay visible when scrolling
+    - navigation.sections # bold section headers in sidebar
+    - navigation.expand # <--- ALLOWS SIDEBAR COLLAPSING/EXPANDING
+    - navigation.indexes # CRITICAL: Makes "Tables" clickable
+    - navigation.top # "Back to Top" button
+    - navigation.path # Breadcrumbs at the top of the page
+    - search.suggest # Intelligent search suggestions
+    - search.highlight # Highlight search terms in result
+    - content.code.copy # Copy button for code blocks
+    - content.tooltips # Hover tooltips
 
   # 2. Refined Color Palettes
   palette:
     - scheme: default
-      primary: custom  # We define this in CSS (GitHub Dark Header)
-      accent: custom   # We define this in CSS (GitHub Blue)
+      primary: custom # We define this in CSS (GitHub Dark Header)
+      accent: custom # We define this in CSS (GitHub Blue)
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - scheme: slate
-      primary: custom  # We define this in CSS (GitHub Dark Mode Blue)
+      primary: custom # We define this in CSS (GitHub Dark Mode Blue)
       accent: custom
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
 
 nav:
-  - Home:
-      - index.md
+  - Home: index.md
 
+  - Architecture:
+      - Overview: architecture/overview.md
+      - Monolith Design: architecture/monolith-design.md
+      - Authentication Flow: architecture/authentication-flow.md
+      - Error Handling: architecture/error-handling.md
+
+  - Setup:
+      - Local Development: setup/local-development.md
+      - Environment Variables: setup/environment-variables.md
+      - Database Setup: setup/database-setup.md
+      - Running Tests: setup/running-tests.md
+
+  - Services:
+      - Auth Service:
+          - Overview: services/auth/overview.md
+          - Database: services/auth/database.md
+          - Endpoints:
+              - Register: services/auth/endpoints/POST-auth-v1-register.md
+              - Login: services/auth/endpoints/POST-auth-v1-login.md
+              - Logout: services/auth/endpoints/POST-auth-v1-logout.md
+              - Me: services/auth/endpoints/GET-auth-v1-me.md
+
+      - Users Service:
+          - Overview: services/users/overview.md
+          - Database: services/users/database.md
+          - Endpoints:
+              - List Users: services/users/endpoints/GET-users-v1-users.md
+              - Get User: services/users/endpoints/GET-users-v1-users-id.md
+              - Update User: services/users/endpoints/PUT-users-v1-users-id.md
+              - Delete User: services/users/endpoints/DELETE-users-v1-users-id.md
+
+      - Products Service:
+          - Overview: services/products/overview.md
+          - Database: services/products/database.md
+          - Endpoints:
+              - Create Product: services/products/endpoints/POST-products-v1-products.md
+              - List Products: services/products/endpoints/GET-products-v1-products.md
+              - Get Product: services/products/endpoints/GET-products-v1-products-id.md
+              - Update Product: services/products/endpoints/PUT-products-v1-products-id.md
+              - Delete Product: services/products/endpoints/DELETE-products-v1-products-id.md
+
+      - Inventory Service:
+          - Overview: services/inventory/overview.md
+          - Database: services/inventory/database.md
+          - Endpoints:
+              - Stock In: services/inventory/endpoints/POST-inventory-v1-stock-in.md
+              - Stock Out: services/inventory/endpoints/POST-inventory-v1-stock-out.md
+              - History: services/inventory/endpoints/GET-inventory-v1-history.md
+              - Summary: services/inventory/endpoints/GET-inventory-v1-summary.md
+
+      - Orders Service:
+          - Overview: services/orders/overview.md
+          - Database: services/orders/database.md
+          - Endpoints:
+              - Create Order: services/orders/endpoints/POST-orders-v1-orders.md
+              - List Orders: services/orders/endpoints/GET-orders-v1-orders.md
+              - Get Order: services/orders/endpoints/GET-orders-v1-orders-id.md
+              - Update Order: services/orders/endpoints/PUT-orders-v1-orders-id.md
+              - Update Status: services/orders/endpoints/PUT-orders-v1-orders-id-status.md
+
+      - Suppliers Service:
+          - Overview: services/suppliers/overview.md
+          - Database: services/suppliers/database.md
+          - Endpoints:
+              - Create Supplier: services/suppliers/endpoints/POST-suppliers-v1-suppliers.md
+              - List Suppliers: services/suppliers/endpoints/GET-suppliers-v1-suppliers.md
+              - Get Supplier: services/suppliers/endpoints/GET-suppliers-v1-suppliers-id.md
+              - Update Supplier: services/suppliers/endpoints/PUT-suppliers-v1-suppliers-id.md
+
+      - Reports Service:
+          - Overview: services/reports/overview.md
+          - Database: services/reports/database.md
+          - Endpoints:
+              - Inventory Report: services/reports/endpoints/GET-reports-v1-inventory.md
+              - Sales Report: services/reports/endpoints/GET-reports-v1-sales.md
+              - Audit Report: services/reports/endpoints/GET-reports-v1-audit.md
+
+  - Security:
+      - Encryption: security/encryption.md
+      - Password Hashing: security/password-hashing.md
+      - JWT: security/jwt.md
+      - Role & Permissions: security/role-permissions.md
+
+  - Performance:
+      - Caching Strategy: performance/caching-strategy.md
+      - Benchmarks: performance/benchmarks.md
+      - Load Testing: performance/load-testing.md
+
+  - Testing:
+      - Unit Testing: testing/unit-testing.md
+      - Integration Testing: testing/integration-testing.md
+      - Test Data: testing/test-data.md
+
+  - Changelog: changelog.md
 
 markdown_extensions:
-  - admonition                # Warning/Note blocks
-  - attr_list                 # Allows adding classes to elements
+  - admonition # Warning/Note blocks
+  - attr_list # Allows adding classes to elements
   - md_in_html
-  - pymdownx.details          # Collapsible "Details" blocks
-  - pymdownx.superfences      # Nesting code blocks inside other blocks
-  - pymdownx.tabbed:          # Content tabs (e.g., Mac vs Windows instructions)
+  - pymdownx.details # Collapsible "Details" blocks
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed: # Content tabs (e.g., Mac vs Windows instructions)
       alternate_style: true
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
@@ -72,3 +169,7 @@ plugins:
 
 extra_css:
   - stylesheets/extra.css
+
+extra_javascript:
+  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
+  - javascripts/mermaid-init.js

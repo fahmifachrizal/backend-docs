@@ -12,7 +12,7 @@ help:
 
 install:
 	pip install --upgrade pip
-	pip install mkdocs mkdocs-material
+	pip install mkdocs mkdocs-material mkdocs-material pymdown-extensions
 
 serve:
 	mkdocs serve

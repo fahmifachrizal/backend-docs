@@ -1,0 +1,99 @@
+SECURITY FOLDER DOCUMENTATION GUIDELINES
+=======================================
+
+Folder: docs/security/
+
+Purpose:
+This folder documents how the system protects data, identities, and access.
+It explains security decisions at a conceptual and implementation-policy level,
+not framework-specific syntax.
+
+Security here focuses on:
+- Authentication
+- Authorization
+- Data protection
+- Attack surface reduction
+- Secure defaults
+
+--------------------------------------------------
+
+File: encryption.md
+
+What to write:
+- What data is considered sensitive
+- Encryption strategy for data at rest
+- Encryption strategy for data in transit
+- Key management approach
+- Limitations and trade-offs
+
+Key sections:
+- Sensitive Data Classification
+- Encryption Algorithms Used
+- Storage Encryption Strategy
+- Transport Security (TLS assumptions)
+- Key Rotation and Storage
+
+--------------------------------------------------
+
+File: password-hashing.md
+
+What to write:
+- Why password hashing is required
+- Hashing algorithm choice and rationale
+- Salting strategy
+- Password verification flow
+- Protection against common attacks
+
+Key sections:
+- Hashing vs Encryption
+- Algorithm Selection
+- Salt and Cost Factor Strategy
+- Login Verification Flow
+- Brute Force and Timing Attack Mitigation
+
+--------------------------------------------------
+
+File: jwt.md
+
+What to write:
+- Purpose of JWT in the system
+- Token structure and claims
+- Token lifetime and expiration
+- Token validation rules
+- Token revocation strategy (if any)
+
+Key sections:
+- Token Payload Design
+- Signing Algorithm
+- Expiration and Renewal
+- Validation Flow
+- Security Considerations
+
+--------------------------------------------------
+
+File: role-permissions.md
+
+What to write:
+- Role-based access control model
+- Defined roles in the system
+- Permission granularity
+- How permissions are enforced
+- Role evolution strategy
+
+Key sections:
+- Role Definitions
+- Permission Mapping
+- Authorization Enforcement Flow
+- Default Access Rules
+- Role Extension Strategy
+
+--------------------------------------------------
+
+Writing Rules for This Folder:
+- Never include secrets or real keys
+- Explain “why” before “how”
+- Assume attacker mindset when explaining defenses
+- Avoid security-through-obscurity explanations
+- Keep it auditable and clear
+
+End of Security Guidelines

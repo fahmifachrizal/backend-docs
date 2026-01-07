@@ -1,0 +1,99 @@
+SETUP FOLDER DOCUMENTATION GUIDELINES
+====================================
+
+Folder: docs/setup/
+
+Purpose:
+This folder explains how to prepare, configure, and run the application
+in a local or development environment.
+It should enable a new developer to run the project successfully
+with minimal context.
+
+This folder focuses on:
+- Environment preparation
+- Configuration
+- Local execution
+- Validation steps
+
+--------------------------------------------------
+
+File: local-development.md
+
+What to write:
+- Prerequisites required to run the project
+- Supported operating systems
+- Required tools and versions
+- Project installation steps
+- How to verify the app is running
+
+Key sections:
+- System Requirements
+- Toolchain Versions (Node, DB, package manager)
+- Installation Steps
+- Running the Application
+- Common Local Issues
+
+--------------------------------------------------
+
+File: environment-variables.md
+
+What to write:
+- Purpose of environment variables
+- Required vs optional variables
+- Variable naming conventions
+- Default values and fallbacks
+- Security considerations
+
+Key sections:
+- Environment Variable Overview
+- Required Variables
+- Optional Variables
+- Example `.env` File (sanitized)
+- Environment Separation Strategy
+
+--------------------------------------------------
+
+File: database-setup.md
+
+What to write:
+- Supported database engine(s)
+- Initial database creation steps
+- Migration strategy
+- Seeding strategy
+- How to verify DB connectivity
+
+Key sections:
+- Database Requirements
+- Schema Initialization
+- Migration Execution
+- Seed Data
+- Health Check Validation
+
+--------------------------------------------------
+
+File: running-tests.md
+
+What to write:
+- Types of tests available
+- How to run tests locally
+- Test environment setup
+- Test data handling
+- Expected outputs
+
+Key sections:
+- Test Types Overview
+- Running Unit Tests
+- Running Integration Tests
+- Test Environment Configuration
+- Troubleshooting Test Failures
+
+--------------------------------------------------
+
+Writing Rules for This Folder:
+- Write for first-time contributors
+- Assume no prior project knowledge
+- Keep steps explicit and ordered
+- Avoid framework internals explanation
+- Prefer commands and outcomes over theory
+
+End of Setup Guidelines

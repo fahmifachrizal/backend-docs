@@ -1,0 +1,79 @@
+TESTING FOLDER DOCUMENTATION GUIDELINES
+======================================
+
+Folder: docs/testing/
+
+Purpose:
+This folder documents the testing strategy and practices used to ensure
+correctness, stability, and reliability of the system.
+It focuses on *what is tested, how it is tested, and why*.
+
+Testing here supports:
+- Confidence in business logic
+- Safe refactoring
+- Fair framework comparison
+
+--------------------------------------------------
+
+File: unit-testing.md
+
+What to write:
+- Purpose of unit tests in this project
+- What qualifies as a unit
+- What should and should not be unit tested
+- Test isolation strategy
+- Naming and organization conventions
+
+Key sections:
+- Definition of a Unit
+- Scope of Unit Tests
+- Mocking and Stubbing Strategy
+- Test Naming Conventions
+- Common Unit Test Pitfalls
+
+--------------------------------------------------
+
+File: integration-testing.md
+
+What to write:
+- Purpose of integration tests
+- Components involved in integration tests
+- Environment requirements
+- Data setup and teardown
+- Failure diagnosis approach
+
+Key sections:
+- Integration Test Scope
+- Test Environment Setup
+- Database and External Dependency Handling
+- Test Data Lifecycle
+- Expected Failure Scenarios
+
+--------------------------------------------------
+
+File: test-data.md
+
+What to write:
+- Strategy for managing test data
+- Difference between static and dynamic test data
+- Data consistency rules
+- Data isolation between tests
+- Cleanup strategy
+
+Key sections:
+- Test Data Categories
+- Seed Data Design
+- Test Data Reuse Rules
+- Cleanup and Reset Strategy
+- Avoiding Test Coupling
+
+--------------------------------------------------
+
+Writing Rules for This Folder:
+- Tests must be deterministic and repeatable
+- Avoid flaky test explanations
+- Separate test intent from implementation details
+- Emphasize correctness over coverage numbers
+- Keep examples conceptual, not framework-specific
+
+End of Testing Guidelines

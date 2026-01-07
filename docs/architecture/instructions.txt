@@ -1,0 +1,94 @@
+ARCHITECTURE FOLDER DOCUMENTATION GUIDELINES
+==========================================
+
+Folder: docs/architecture/
+
+Purpose:
+This folder explains the *system-level design* of the backend application.
+It answers: "How is this system structured and why?"
+
+This folder must stay framework-agnostic where possible and focus on
+decisions, boundaries, and flows rather than code.
+
+--------------------------------------------------
+
+File: overview.md
+
+What to write:
+- High-level description of the system (Inventory Management Monolith)
+- Core goals of the system (scalability, clarity, comparability)
+- Target users (developers, reviewers, decision makers)
+- What this system is NOT (not microservices, not event-driven)
+- Summary diagram description (textual explanation if no diagram)
+
+Key sections:
+- System Purpose
+- High-Level Components
+- Deployment Model (single service, monolith)
+- Technology Stack Summary
+- Design Constraints
+
+--------------------------------------------------
+
+File: monolith-design.md
+
+What to write:
+- Explanation of why monolith architecture was chosen
+- Definition of “modular monolith” in this project
+- How services are logically separated (auth, users, inventory, etc.)
+- How shared infrastructure is handled (DB, cache, config)
+- Rules for module boundaries (what can call what)
+
+Key sections:
+- Monolith vs Microservices (brief comparison)
+- Module Isolation Rules
+- Dependency Direction (controllers → services → repositories)
+- Shared vs Owned Resources
+- Future Scalability Considerations
+
+--------------------------------------------------
+
+File: authentication-flow.md
+
+What to write:
+- End-to-end authentication flow description
+- How registration works conceptually
+- How login works conceptually
+- Token lifecycle (creation, validation, expiration)
+- How auth is enforced across services
+
+Key sections:
+- Registration Flow
+- Login Flow
+- Token Strategy (JWT, expiration, refresh if any)
+- Authorization Check Flow
+- Failure Scenarios
+
+--------------------------------------------------
+
+File: error-handling.md
+
+What to write:
+- Global error handling philosophy
+- Error categories (validation, auth, business, system)
+- Error response format standard
+- Logging strategy for errors
+- How errors propagate through layers
+
+Key sections:
+- Error Classification
+- Standard Error Response Schema
+- Controller vs Service Errors
+- Logging & Observability
+- Client-Facing vs Internal Errors
+
+--------------------------------------------------
+
+Writing Rules for This Folder:
+- No code snippets unless absolutely necessary
+- Use diagrams only if they add clarity (optional)
+- Focus on decisions, not implementation
+- Keep explanations readable for non-framework experts
+- Assume the reader has general backend knowledge
+
+End of Architecture Guidelines

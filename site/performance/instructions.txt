@@ -1,0 +1,81 @@
+PERFORMANCE FOLDER DOCUMENTATION GUIDELINES
+==========================================
+
+Folder: docs/performance/
+
+Purpose:
+This folder documents how the system performs, how performance is measured,
+and what strategies are used to optimize runtime behavior.
+It supports fair comparison across backend frameworks.
+
+Performance here is about:
+- Startup time
+- Request latency
+- Throughput
+- Resource usage
+- Cache effectiveness
+
+--------------------------------------------------
+
+File: caching-strategy.md
+
+What to write:
+- Why caching is used in this system
+- Which data is cacheable and why
+- Cache scope (in-memory, distributed, per-instance)
+- Cache key design principles
+- Cache invalidation rules
+
+Key sections:
+- Cache Use Cases (read-heavy endpoints)
+- Cached Data Types (lists, aggregates, lookups)
+- Cache Key Design
+- TTL Strategy
+- Cache Invalidation Triggers
+
+--------------------------------------------------
+
+File: benchmarks.md
+
+What to write:
+- What metrics are measured
+- How benchmarks are executed
+- Hardware and environment assumptions
+- Tools used for benchmarking
+- How results should be interpreted
+
+Key sections:
+- Benchmark Goals
+- Measurement Environment
+- Metrics Definition (latency, RPS, startup time)
+- Test Scenarios
+- Result Interpretation Guidelines
+
+--------------------------------------------------
+
+File: load-testing.md
+
+What to write:
+- Load testing philosophy
+- Types of load tests performed
+- Traffic patterns simulated
+- Failure thresholds and expectations
+- Observed bottlenecks
+
+Key sections:
+- Load Profiles (steady, spike, stress)
+- Concurrency Levels
+- Endpoint Selection
+- Resource Monitoring (CPU, memory)
+- Stability and Degradation Behavior
+
+--------------------------------------------------
+
+Writing Rules for This Folder:
+- Use numbers, not opinions
+- Always state assumptions
+- Avoid framework-specific tuning tricks
+- Focus on repeatable and comparable tests
+- Keep conclusions separate from raw results
+
+End of Performance Guidelines
