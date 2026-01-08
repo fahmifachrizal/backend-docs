@@ -146,7 +146,9 @@ These constraints ensure the system remains understandable, comparable, and main
 
 ## Summary Diagram
 
-At a high level, request flow follows this structure:
+At a high level, incoming requests traverse a layered backend architecture designed to clearly separate concerns and enforce consistency across the system.
+
+The API layer acts as the entry point, handling request validation and routing. Requests then pass through middleware, where cross-cutting concerns such as authentication, authorization, logging, and rate limiting are enforced before business logic is executed.
 
 ```mermaid
 flowchart LR
@@ -163,6 +165,10 @@ flowchart LR
   C --> M --> S --> R --> DB[(Database)]
 ```
 
+Once a request reaches the core domain, the service layer encapsulates all business rules and orchestration logic. Data persistence and retrieval are delegated to repositories, ensuring the service layer remains database-agnostic.
+
+To illustrate how these layers interact during an authenticated request, the following sequence diagram shows a typical request lifecycle involving token validation and user context propagation.
+
 ```mermaid
 sequenceDiagram
   autonumber
@@ -172,6 +178,6 @@ sequenceDiagram
   API->>Service: Execute action
 ```
 
-Cross-cutting concerns such as authentication, caching, logging, and error handling are applied consistently across all layers.
+Throughout this flow, cross-cutting concerns—such as authentication, caching, logging, and error handling—are applied consistently, ensuring predictable behavior and simplifying system-wide observability.
 
 ---

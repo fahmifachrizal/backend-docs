@@ -4125,7 +4125,8 @@ Inter-module communication occurs via in-process calls, not network requests.</p
 <p>These constraints ensure the system remains understandable, comparable, and maintainable.</p>
 <hr />
 <h2 id="summary-diagram">Summary Diagram<a class="headerlink" href="#summary-diagram" title="Permanent link">&para;</a></h2>
-<p>At a high level, request flow follows this structure:</p>
+<p>At a high level, incoming requests traverse a layered backend architecture designed to clearly separate concerns and enforce consistency across the system.</p>
+<p>The API layer acts as the entry point, handling request validation and routing. Requests then pass through middleware, where cross-cutting concerns such as authentication, authorization, logging, and rate limiting are enforced before business logic is executed.</p>
 <pre class="mermaid"><code>flowchart LR
   subgraph API
     C[Controller]
@@ -4138,13 +4139,15 @@ Inter-module communication occurs via in-process calls, not network requests.</p
   end
 
   C --&gt; M --&gt; S --&gt; R --&gt; DB[(Database)]</code></pre>
+<p>Once a request reaches the core domain, the service layer encapsulates all business rules and orchestration logic. Data persistence and retrieval are delegated to repositories, ensuring the service layer remains database-agnostic.</p>
+<p>To illustrate how these layers interact during an authenticated request, the following sequence diagram shows a typical request lifecycle involving token validation and user context propagation.</p>
 <pre class="mermaid"><code>sequenceDiagram
   autonumber
   Client-&gt;&gt;API: Request + JWT
   API-&gt;&gt;Auth: Verify token
   Auth--&gt;&gt;API: User context
   API-&gt;&gt;Service: Execute action</code></pre>
-<p>Cross-cutting concerns such as authentication, caching, logging, and error handling are applied consistently across all layers.</p>
+<p>Throughout this flow, cross-cutting concerns—such as authentication, caching, logging, and error handling—are applied consistently, ensuring predictable behavior and simplifying system-wide observability.</p>
 <hr />
 
 

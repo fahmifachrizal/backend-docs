@@ -168,3 +168,125 @@ pre {
 .md-typeset table:not([class]) th {
   background-color: var(--md-default-bg-color--lightest)
 }
+
+/* ==========================================================================
+   MERMAID.JS — MATERIAL + GITHUB-STYLE THEME
+   ========================================================================== */
+
+/* --------------------------------------------------
+   1. Theme Variables (Light / Dark aware)
+   -------------------------------------------------- */
+:root {
+  --mermaid-bg: var(--md-default-bg-color);
+  --mermaid-node-bg: var(--md-code-bg-color);
+  --mermaid-border: #d0d7de;
+  --mermaid-arrow: var(--md-default-fg-color);
+  --mermaid-text: var(--md-default-fg-color);
+  --mermaid-muted: var(--md-default-fg-color--light);
+}
+
+[data-md-color-scheme="slate"] {
+  --mermaid-border: #30363d;
+  --mermaid-arrow: var(--md-default-fg-color);
+}
+
+/* --------------------------------------------------
+   2. Base Mermaid Typography
+   -------------------------------------------------- */
+.mermaid {
+  font-family: "Ui Monospace", "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 14px;
+  background: transparent;
+}
+
+/* --------------------------------------------------
+   3. Flowchart Nodes
+   -------------------------------------------------- */
+.mermaid .node rect,
+.mermaid .node circle,
+.mermaid .node polygon,
+.mermaid .node path {
+  fill: var(--mermaid-node-bg);
+  stroke: var(--mermaid-border);
+  stroke-width: 1px;
+  rx: 6px;
+  ry: 6px;
+  border-radius: 6px !important;
+}
+
+.mermaid .node .label {
+  fill: var(--mermaid-text);
+  color: var(--mermaid-text);
+  font-weight: 500;
+}
+
+/* --------------------------------------------------
+   4. Edges & Arrows
+   -------------------------------------------------- */
+.mermaid .edgePath .path {
+  stroke: var(--mermaid-arrow);
+  stroke-width: 1.4px;
+}
+
+.mermaid marker path {
+  fill: var(--mermaid-arrow);
+}
+
+/* --------------------------------------------------
+   5. Sequence Diagram — Actors
+   -------------------------------------------------- */
+.mermaid rect.actor {
+  fill: var(--mermaid-node-bg);
+  stroke: var(--mermaid-border);
+  stroke-width: 1px;
+  border-radius: 6px !important;
+}
+
+.mermaid text.actor {
+  fill: var(--mermaid-text);
+  font-weight: 600;
+}
+
+.mermaid line.actor-line {
+  stroke: var(--mermaid-border);
+  stroke-width: 1px;
+  opacity: 0.7;
+}
+
+/* --------------------------------------------------
+   6. Messages
+   -------------------------------------------------- */
+.mermaid .messageLine0,
+.mermaid .messageLine1 {
+  stroke: var(--mermaid-arrow);
+  stroke-width: 1.4px;
+}
+
+.mermaid .messageText {
+  fill: var(--mermaid-text);
+  font-size: 0.85em;
+}
+
+/* --------------------------------------------------
+   7. Notes & Groups
+   -------------------------------------------------- */
+.mermaid rect.note {
+  fill: var(--md-code-bg-color);
+  stroke: var(--mermaid-border);
+}
+
+.mermaid .noteText {
+  fill: var(--mermaid-text);
+  font-size: 0.85em;
+}
+
+.mermaid rect.labelBox {
+  fill: transparent;
+  stroke: var(--mermaid-border);
+  stroke-dasharray: 4 4;
+}
+
+.mermaid .loopText,
+.mermaid .labelText {
+  fill: var(--mermaid-muted);
+}
