@@ -23,7 +23,6 @@ theme:
     - navigation.tabs # Top-level tabs for major sections
     - navigation.tabs.sticky # Tabs stay visible when scrolling
     - navigation.sections # bold section headers in sidebar
-    - navigation.expand # <--- ALLOWS SIDEBAR COLLAPSING/EXPANDING
     - navigation.indexes # CRITICAL: Makes "Tables" clickable
     - navigation.top # "Back to Top" button
     - navigation.path # Breadcrumbs at the top of the page
@@ -62,70 +61,77 @@ nav:
       - Database Setup: setup/database-setup.md
       - Running Tests: setup/running-tests.md
 
-  - Services:
-      - Auth Service:
-          - Overview: services/auth/overview.md
-          - Database: services/auth/database.md
-          - Endpoints:
-              - Register: services/auth/endpoints/POST-auth-v1-register.md
-              - Login: services/auth/endpoints/POST-auth-v1-login.md
-              - Logout: services/auth/endpoints/POST-auth-v1-logout.md
-              - Me: services/auth/endpoints/GET-auth-v1-me.md
-
-      - Users Service:
-          - Overview: services/users/overview.md
-          - Database: services/users/database.md
-          - Endpoints:
-              - List Users: services/users/endpoints/GET-users-v1-users.md
-              - Get User: services/users/endpoints/GET-users-v1-users-id.md
-              - Update User: services/users/endpoints/PUT-users-v1-users-id.md
-              - Delete User: services/users/endpoints/DELETE-users-v1-users-id.md
-
-      - Products Service:
-          - Overview: services/products/overview.md
-          - Database: services/products/database.md
-          - Endpoints:
-              - Create Product: services/products/endpoints/POST-products-v1-products.md
-              - List Products: services/products/endpoints/GET-products-v1-products.md
-              - Get Product: services/products/endpoints/GET-products-v1-products-id.md
-              - Update Product: services/products/endpoints/PUT-products-v1-products-id.md
-              - Delete Product: services/products/endpoints/DELETE-products-v1-products-id.md
-
-      - Inventory Service:
-          - Overview: services/inventory/overview.md
-          - Database: services/inventory/database.md
-          - Endpoints:
-              - Stock In: services/inventory/endpoints/POST-inventory-v1-stock-in.md
-              - Stock Out: services/inventory/endpoints/POST-inventory-v1-stock-out.md
-              - History: services/inventory/endpoints/GET-inventory-v1-history.md
-              - Summary: services/inventory/endpoints/GET-inventory-v1-summary.md
-
-      - Orders Service:
-          - Overview: services/orders/overview.md
-          - Database: services/orders/database.md
-          - Endpoints:
-              - Create Order: services/orders/endpoints/POST-orders-v1-orders.md
-              - List Orders: services/orders/endpoints/GET-orders-v1-orders.md
-              - Get Order: services/orders/endpoints/GET-orders-v1-orders-id.md
-              - Update Order: services/orders/endpoints/PUT-orders-v1-orders-id.md
-              - Update Status: services/orders/endpoints/PUT-orders-v1-orders-id-status.md
-
-      - Suppliers Service:
-          - Overview: services/suppliers/overview.md
-          - Database: services/suppliers/database.md
-          - Endpoints:
-              - Create Supplier: services/suppliers/endpoints/POST-suppliers-v1-suppliers.md
-              - List Suppliers: services/suppliers/endpoints/GET-suppliers-v1-suppliers.md
-              - Get Supplier: services/suppliers/endpoints/GET-suppliers-v1-suppliers-id.md
-              - Update Supplier: services/suppliers/endpoints/PUT-suppliers-v1-suppliers-id.md
-
-      - Reports Service:
-          - Overview: services/reports/overview.md
-          - Database: services/reports/database.md
-          - Endpoints:
-              - Inventory Report: services/reports/endpoints/GET-reports-v1-inventory.md
-              - Sales Report: services/reports/endpoints/GET-reports-v1-sales.md
-              - Audit Report: services/reports/endpoints/GET-reports-v1-audit.md
+  - Framework:
+      - Tables:
+          - Users: framework/tables/users.md
+          - Roles: framework/tables/roles.md
+          - Auth Credentials: framework/tables/auth_credentials.md
+          - Products: framework/tables/products.md
+          - Categories: framework/tables/categories.md
+          - Product Categories: framework/tables/product_categories.md
+          - Inventory Items: framework/tables/inventory_items.md
+          - Inventory Transactions: framework/tables/inventory_transactions.md
+          - Orders: framework/tables/orders.md
+          - Order Items: framework/tables/order_items.md
+          - Suppliers: framework/tables/suppliers.md
+          - Supplier Products: framework/tables/supplier_products.md
+      - Services:
+          - Auth:
+              - Overview: framework/services/auth/overview.md
+              - Database: framework/services/auth/database.md
+              - Endpoints:
+                  - Test 1: framework/services/auth/endpoints/POST-test-1.md
+                  - Test 2: framework/services/auth/endpoints/POST-test-2.md
+                  - Test 3: framework/services/auth/endpoints/POST-test-3.md
+                  - Test 4: framework/services/auth/endpoints/POST-test-4.md
+          - Users:
+              - Overview: framework/services/users/overview.md
+              - Database: framework/services/users/database.md
+              - Endpoints:
+                  - Test 1: framework/services/users/endpoints/POST-test-1.md
+                  - Test 2: framework/services/users/endpoints/POST-test-2.md
+                  - Test 3: framework/services/users/endpoints/POST-test-3.md
+                  - Test 4: framework/services/users/endpoints/POST-test-4.md
+          - Products:
+              - Overview: framework/services/products/overview.md
+              - Database: framework/services/products/database.md
+              - Endpoints:
+                  - Test 1: framework/services/products/endpoints/POST-test-1.md
+                  - Test 2: framework/services/products/endpoints/POST-test-2.md
+                  - Test 3: framework/services/products/endpoints/POST-test-3.md
+                  - Test 4: framework/services/products/endpoints/POST-test-4.md
+          - Inventory:
+              - Overview: framework/services/inventory/overview.md
+              - Database: framework/services/inventory/database.md
+              - Endpoints:
+                  - Test 1: framework/services/inventory/endpoints/POST-test-1.md
+                  - Test 2: framework/services/inventory/endpoints/POST-test-2.md
+                  - Test 3: framework/services/inventory/endpoints/POST-test-3.md
+                  - Test 4: framework/services/inventory/endpoints/POST-test-4.md
+          - Orders:
+              - Overview: framework/services/orders/overview.md
+              - Database: framework/services/orders/database.md
+              - Endpoints:
+                  - Test 1: framework/services/orders/endpoints/POST-test-1.md
+                  - Test 2: framework/services/orders/endpoints/POST-test-2.md
+                  - Test 3: framework/services/orders/endpoints/POST-test-3.md
+                  - Test 4: framework/services/orders/endpoints/POST-test-4.md
+          - Suppliers:
+              - Overview: framework/services/suppliers/overview.md
+              - Database: framework/services/suppliers/database.md
+              - Endpoints:
+                  - Test 1: framework/services/suppliers/endpoints/POST-test-1.md
+                  - Test 2: framework/services/suppliers/endpoints/POST-test-2.md
+                  - Test 3: framework/services/suppliers/endpoints/POST-test-3.md
+                  - Test 4: framework/services/suppliers/endpoints/POST-test-4.md
+          - Reports:
+              - Overview: framework/services/reports/overview.md
+              - Database: framework/services/reports/database.md
+              - Endpoints:
+                  - Test 1: framework/services/reports/endpoints/POST-test-1.md
+                  - Test 2: framework/services/reports/endpoints/POST-test-2.md
+                  - Test 3: framework/services/reports/endpoints/POST-test-3.md
+                  - Test 4: framework/services/reports/endpoints/POST-test-4.md
 
   - Security:
       - Encryption: security/encryption.md

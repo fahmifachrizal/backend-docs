@@ -81,6 +81,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#error-handling-strategy" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -294,13 +299,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../services/auth/overview.md" class="md-tabs__link">
+        <a href="../../framework/tables/users/" class="md-tabs__link">
           
   
   
     
   
-  Services
+  Framework
 
         </a>
       </li>
@@ -638,6 +643,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Error Handling
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -655,6 +680,269 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling-philosophy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Handling Philosophy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Classification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Error Classification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#validation-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validation Errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication Errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authorization-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authorization Errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#business-domain-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business (Domain) Errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#standard-error-response-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Standard Error Response Schema
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controller-vs-service-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controller vs Service Errors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Controller vs Service Errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-layer-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Layer Errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controller-layer-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controller Layer Errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-propagation-through-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Propagation Through Layers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging-observability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logging &amp; Observability
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logging &amp; Observability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logging-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logging Strategy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logged-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logged Information
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#client-facing-vs-internal-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Client-Facing vs Internal Errors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Client-Facing vs Internal Errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#client-facing-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Client-Facing Errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internal-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Internal Errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -698,9 +986,7 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -767,7 +1053,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/environment-variables.md" class="md-nav__link">
+      <a href="../../setup/environment-variables/" class="md-nav__link">
         
   
   
@@ -823,7 +1109,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/running-tests.md" class="md-nav__link">
+      <a href="../../setup/running-tests/" class="md-nav__link">
         
   
   
@@ -864,16 +1150,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
     
     
     
@@ -887,9 +1163,7 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -899,7 +1173,7 @@
   <span class="md-ellipsis">
     
   
-    Services
+    Framework
   
 
     
@@ -915,6 +1189,496 @@
             <span class="md-nav__icon md-icon"></span>
             
   
+    Framework
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tables
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tables
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/tables/users/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Users
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/tables/roles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/tables/auth_credentials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Auth Credentials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/tables/products/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Products
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/tables/categories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Categories
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/tables/product_categories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Categories
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/tables/inventory_items/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inventory Items
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/tables/inventory_transactions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inventory Transactions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/tables/orders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orders
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/tables/order_items/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Order Items
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/tables/suppliers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Suppliers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/tables/supplier_products/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Supplier Products
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Services
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
     Services
   
 
@@ -949,19 +1713,17 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_1" >
         
           
-          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_2_1" id="__nav_4_2_1_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Auth Service
+    Auth
   
 
     
@@ -972,12 +1734,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_1">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_1">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Auth Service
+    Auth
   
 
           </label>
@@ -990,7 +1752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../services/auth/overview.md" class="md-nav__link">
+      <a href="../../framework/services/auth/overview/" class="md-nav__link">
         
   
   
@@ -1018,7 +1780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../services/auth/database.md" class="md-nav__link">
+      <a href="../../framework/services/auth/database/" class="md-nav__link">
         
   
   
@@ -1069,12 +1831,10 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_1_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_1_3" >
         
           
-          <label class="md-nav__link" for="__nav_4_1_3" id="__nav_4_1_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_2_1_3" id="__nav_4_2_1_3_label" tabindex="0">
             
   
   
@@ -1092,8 +1852,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_1_3">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_1_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1110,14 +1870,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../services/auth/endpoints/POST-auth-v1-register.md" class="md-nav__link">
+      <a href="../../framework/services/auth/endpoints/POST-test-1/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Register
+    Test 1
   
 
     
@@ -1138,14 +1898,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../services/auth/endpoints/POST-auth-v1-login.md" class="md-nav__link">
+      <a href="../../framework/services/auth/endpoints/POST-test-2/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Login
+    Test 2
   
 
     
@@ -1166,14 +1926,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../services/auth/endpoints/POST-auth-v1-logout.md" class="md-nav__link">
+      <a href="../../framework/services/auth/endpoints/POST-test-3/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Logout
+    Test 3
   
 
     
@@ -1194,14 +1954,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../services/auth/endpoints/GET-auth-v1-me.md" class="md-nav__link">
+      <a href="../../framework/services/auth/endpoints/POST-test-4/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Me
+    Test 4
   
 
     
@@ -1259,19 +2019,17 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_2" >
         
           
-          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_2_2" id="__nav_4_2_2_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Users Service
+    Users
   
 
     
@@ -1282,12 +2040,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_2">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Users Service
+    Users
   
 
           </label>
@@ -1300,7 +2058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../services/users/overview.md" class="md-nav__link">
+      <a href="../../framework/services/users/overview/" class="md-nav__link">
         
   
   
@@ -1328,7 +2086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../services/users/database.md" class="md-nav__link">
+      <a href="../../framework/services/users/database/" class="md-nav__link">
         
   
   
@@ -1379,9 +2137,195 @@
       
         
         
-          
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_2_3" >
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2_3" >
+          
+          <label class="md-nav__link" for="__nav_4_2_2_3" id="__nav_4_2_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Endpoints
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Endpoints
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/services/users/endpoints/POST-test-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/services/users/endpoints/POST-test-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/services/users/endpoints/POST-test-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/services/users/endpoints/POST-test-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_3" >
         
           
           <label class="md-nav__link" for="__nav_4_2_3" id="__nav_4_2_3_label" tabindex="0">
@@ -1391,7 +2335,7 @@
   <span class="md-ellipsis">
     
   
-    Endpoints
+    Products
   
 
     
@@ -1407,7 +2351,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Endpoints
+    Products
   
 
           </label>
@@ -1420,197 +2364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../services/users/endpoints/GET-users-v1-users.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    List Users
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../services/users/endpoints/GET-users-v1-users-id.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Get User
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../services/users/endpoints/PUT-users-v1-users-id.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Update User
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../services/users/endpoints/DELETE-users-v1-users-id.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Delete User
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Products Service
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Products Service
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../services/products/overview.md" class="md-nav__link">
+      <a href="../../framework/services/products/overview/" class="md-nav__link">
         
   
   
@@ -1638,347 +2392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../services/products/database.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Database
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_4_3_3" id="__nav_4_3_3_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Endpoints
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_3_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Endpoints
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../services/products/endpoints/POST-products-v1-products.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Create Product
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../services/products/endpoints/GET-products-v1-products.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    List Products
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../services/products/endpoints/GET-products-v1-products-id.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Get Product
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../services/products/endpoints/PUT-products-v1-products-id.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Update Product
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../services/products/endpoints/DELETE-products-v1-products-id.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Delete Product
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Inventory Service
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Inventory Service
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../services/inventory/overview.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Overview
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../services/inventory/database.md" class="md-nav__link">
+      <a href="../../framework/services/products/database/" class="md-nav__link">
         
   
   
@@ -2029,12 +2443,10 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_3_3" >
         
           
-          <label class="md-nav__link" for="__nav_4_4_3" id="__nav_4_4_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_2_3_3" id="__nav_4_2_3_3_label" tabindex="0">
             
   
   
@@ -2052,8 +2464,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_4_3">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_3_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2070,14 +2482,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../services/inventory/endpoints/POST-inventory-v1-stock-in.md" class="md-nav__link">
+      <a href="../../framework/services/products/endpoints/POST-test-1/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Stock In
+    Test 1
   
 
     
@@ -2098,14 +2510,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../services/inventory/endpoints/POST-inventory-v1-stock-out.md" class="md-nav__link">
+      <a href="../../framework/services/products/endpoints/POST-test-2/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Stock Out
+    Test 2
   
 
     
@@ -2126,14 +2538,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../services/inventory/endpoints/GET-inventory-v1-history.md" class="md-nav__link">
+      <a href="../../framework/services/products/endpoints/POST-test-3/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    History
+    Test 3
   
 
     
@@ -2154,14 +2566,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../services/inventory/endpoints/GET-inventory-v1-summary.md" class="md-nav__link">
+      <a href="../../framework/services/products/endpoints/POST-test-4/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Summary
+    Test 4
   
 
     
@@ -2219,19 +2631,17 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_4" >
         
           
-          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_2_4" id="__nav_4_2_4_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Orders Service
+    Inventory
   
 
     
@@ -2242,12 +2652,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_4">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Orders Service
+    Inventory
   
 
           </label>
@@ -2260,7 +2670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../services/orders/overview.md" class="md-nav__link">
+      <a href="../../framework/services/inventory/overview/" class="md-nav__link">
         
   
   
@@ -2288,347 +2698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../services/orders/database.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Database
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_5_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_4_5_3" id="__nav_4_5_3_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Endpoints
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_5_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Endpoints
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../services/orders/endpoints/POST-orders-v1-orders.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Create Order
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../services/orders/endpoints/GET-orders-v1-orders.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    List Orders
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../services/orders/endpoints/GET-orders-v1-orders-id.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Get Order
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../services/orders/endpoints/PUT-orders-v1-orders-id.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Update Order
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../services/orders/endpoints/PUT-orders-v1-orders-id-status.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Update Status
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Suppliers Service
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_6">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Suppliers Service
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../services/suppliers/overview.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Overview
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../services/suppliers/database.md" class="md-nav__link">
+      <a href="../../framework/services/inventory/database/" class="md-nav__link">
         
   
   
@@ -2679,12 +2749,10 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_6_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_4_3" >
         
           
-          <label class="md-nav__link" for="__nav_4_6_3" id="__nav_4_6_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_2_4_3" id="__nav_4_2_4_3_label" tabindex="0">
             
   
   
@@ -2702,8 +2770,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_6_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_6_3">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_4_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2720,14 +2788,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../services/suppliers/endpoints/POST-suppliers-v1-suppliers.md" class="md-nav__link">
+      <a href="../../framework/services/inventory/endpoints/POST-test-1/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Create Supplier
+    Test 1
   
 
     
@@ -2748,14 +2816,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../services/suppliers/endpoints/GET-suppliers-v1-suppliers.md" class="md-nav__link">
+      <a href="../../framework/services/inventory/endpoints/POST-test-2/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    List Suppliers
+    Test 2
   
 
     
@@ -2776,14 +2844,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../services/suppliers/endpoints/GET-suppliers-v1-suppliers-id.md" class="md-nav__link">
+      <a href="../../framework/services/inventory/endpoints/POST-test-3/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Get Supplier
+    Test 3
   
 
     
@@ -2804,14 +2872,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../services/suppliers/endpoints/PUT-suppliers-v1-suppliers-id.md" class="md-nav__link">
+      <a href="../../framework/services/inventory/endpoints/POST-test-4/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Update Supplier
+    Test 4
   
 
     
@@ -2869,19 +2937,17 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_5" >
         
           
-          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_2_5" id="__nav_4_2_5_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Reports Service
+    Orders
   
 
     
@@ -2892,12 +2958,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_7">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_5">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Reports Service
+    Orders
   
 
           </label>
@@ -2910,7 +2976,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../services/reports/overview.md" class="md-nav__link">
+      <a href="../../framework/services/orders/overview/" class="md-nav__link">
         
   
   
@@ -2938,7 +3004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../services/reports/database.md" class="md-nav__link">
+      <a href="../../framework/services/orders/database/" class="md-nav__link">
         
   
   
@@ -2974,6 +3040,8 @@
       
         
       
+        
+      
     
     
     
@@ -2987,12 +3055,10 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_7_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_5_3" >
         
           
-          <label class="md-nav__link" for="__nav_4_7_3" id="__nav_4_7_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_2_5_3" id="__nav_4_2_5_3_label" tabindex="0">
             
   
   
@@ -3010,8 +3076,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_7_3">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_5_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -3028,14 +3094,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../services/reports/endpoints/GET-reports-v1-inventory.md" class="md-nav__link">
+      <a href="../../framework/services/orders/endpoints/POST-test-1/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Inventory Report
+    Test 1
   
 
     
@@ -3056,14 +3122,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../services/reports/endpoints/GET-reports-v1-sales.md" class="md-nav__link">
+      <a href="../../framework/services/orders/endpoints/POST-test-2/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Sales Report
+    Test 2
   
 
     
@@ -3084,14 +3150,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../services/reports/endpoints/GET-reports-v1-audit.md" class="md-nav__link">
+      <a href="../../framework/services/orders/endpoints/POST-test-3/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Audit Report
+    Test 3
   
 
     
@@ -3100,6 +3166,654 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/services/orders/endpoints/POST-test-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_6" id="__nav_4_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Suppliers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Suppliers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/services/suppliers/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/services/suppliers/database/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_6_3" id="__nav_4_2_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Endpoints
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Endpoints
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/services/suppliers/endpoints/POST-test-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/services/suppliers/endpoints/POST-test-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/services/suppliers/endpoints/POST-test-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/services/suppliers/endpoints/POST-test-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_7" id="__nav_4_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reports
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reports
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/services/reports/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/services/reports/database/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_7_3" id="__nav_4_2_7_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Endpoints
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Endpoints
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/services/reports/endpoints/POST-test-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/services/reports/endpoints/POST-test-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/services/reports/endpoints/POST-test-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/services/reports/endpoints/POST-test-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -3158,9 +3872,7 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -3339,9 +4051,7 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -3492,9 +4202,7 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -3589,7 +4297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../testing/test-data/" class="md-nav__link">
+      <a href="../../testing/test-data.md" class="md-nav__link">
         
   
   
@@ -3661,6 +4369,260 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling-philosophy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Handling Philosophy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Classification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Error Classification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#validation-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validation Errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication Errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authorization-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authorization Errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#business-domain-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business (Domain) Errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#standard-error-response-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Standard Error Response Schema
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controller-vs-service-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controller vs Service Errors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Controller vs Service Errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-layer-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Layer Errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controller-layer-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controller Layer Errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-propagation-through-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Propagation Through Layers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging-observability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logging &amp; Observability
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logging &amp; Observability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logging-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logging Strategy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logged-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logged Information
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#client-facing-vs-internal-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Client-Facing vs Internal Errors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Client-Facing vs Internal Errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#client-facing-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Client-Facing Errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internal-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Internal Errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -3728,9 +4690,180 @@
   
 
 
-  <h1>Error Handling</h1>
-
-
+<h1 id="error-handling-strategy">Error Handling Strategy<a class="headerlink" href="#error-handling-strategy" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>This document defines the <strong>global error handling philosophy</strong> for the system. Errors are treated as first-class citizens and are handled in a consistent, predictable, and observable manner across all layers of the application.</p>
+<p>The primary goals of this strategy are:</p>
+<ul>
+<li>Clear communication to API consumers</li>
+<li>Strong separation between domain and transport concerns</li>
+<li>Safe handling of unexpected failures</li>
+<li>High observability for debugging and monitoring</li>
+</ul>
+<hr />
+<h2 id="error-handling-philosophy">Error Handling Philosophy<a class="headerlink" href="#error-handling-philosophy" title="Permanent link">&para;</a></h2>
+<p>The system follows these core principles:</p>
+<ul>
+<li>Errors are <strong>explicit and intentional</strong></li>
+<li>Domain rules fail fast and clearly</li>
+<li>Technical failures are isolated from business logic</li>
+<li>Client-facing errors never leak internal implementation details</li>
+<li>All errors are observable and traceable</li>
+</ul>
+<p>Every error must belong to a well-defined category and follow a standardized response format.</p>
+<hr />
+<h2 id="error-classification">Error Classification<a class="headerlink" href="#error-classification" title="Permanent link">&para;</a></h2>
+<p>Errors are classified into the following categories:</p>
+<h3 id="validation-errors">Validation Errors<a class="headerlink" href="#validation-errors" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Occur when input data is malformed or incomplete</li>
+<li>Detected at the API or middleware layer</li>
+<li>Examples:</li>
+<li>Missing required fields</li>
+<li>Invalid data types</li>
+<li>Schema violations</li>
+</ul>
+<h3 id="authentication-errors">Authentication Errors<a class="headerlink" href="#authentication-errors" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Occur when identity verification fails</li>
+<li>Examples:</li>
+<li>Missing token</li>
+<li>Invalid or expired token</li>
+</ul>
+<h3 id="authorization-errors">Authorization Errors<a class="headerlink" href="#authorization-errors" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Occur when a user is authenticated but lacks permission</li>
+<li>Examples:</li>
+<li>Accessing a restricted resource</li>
+<li>Invalid role for an action</li>
+</ul>
+<h3 id="business-domain-errors">Business (Domain) Errors<a class="headerlink" href="#business-domain-errors" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Represent valid requests that violate business rules</li>
+<li>Thrown from the service layer</li>
+<li>Examples:</li>
+<li>Insufficient inventory</li>
+<li>Invalid state transitions</li>
+<li>Duplicate resource creation</li>
+</ul>
+<h3 id="system-errors">System Errors<a class="headerlink" href="#system-errors" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Unexpected failures in infrastructure or runtime</li>
+<li>Examples:</li>
+<li>Database connection failure</li>
+<li>Timeout</li>
+<li>Unhandled exceptions</li>
+</ul>
+<hr />
+<h2 id="standard-error-response-schema">Standard Error Response Schema<a class="headerlink" href="#standard-error-response-schema" title="Permanent link">&para;</a></h2>
+<p>All API errors conform to a single response structure:</p>
+<p>"""
+{
+  "success": false,
+  "error": {
+    "code": "ERROR_CODE",
+    "message": "Human-readable description",
+    "details": {
+      "optional": "contextual information"
+    }
+  }
+}
+"""</p>
+<p>Rules:</p>
+<ul>
+<li>The response format is consistent across all endpoints</li>
+<li>Error codes are stable and machine-readable</li>
+<li>Messages are safe for client consumption</li>
+<li>Details are optional and non-sensitive</li>
+</ul>
+<hr />
+<h2 id="controller-vs-service-errors">Controller vs Service Errors<a class="headerlink" href="#controller-vs-service-errors" title="Permanent link">&para;</a></h2>
+<h3 id="service-layer-errors">Service Layer Errors<a class="headerlink" href="#service-layer-errors" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Services are responsible for enforcing business rules</li>
+<li>Services throw <strong>domain-specific errors</strong></li>
+<li>Services are unaware of HTTP semantics</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>InventoryInsufficientError</li>
+<li>OrderStateInvalidError</li>
+</ul>
+<h3 id="controller-layer-errors">Controller Layer Errors<a class="headerlink" href="#controller-layer-errors" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Controllers translate domain errors into HTTP responses</li>
+<li>Controllers do not contain business logic</li>
+<li>Controllers do not throw domain errors directly</li>
+</ul>
+<p>Responsibilities:</p>
+<ul>
+<li>Map error types to HTTP status codes</li>
+<li>Attach appropriate error responses</li>
+<li>Ensure consistent formatting</li>
+</ul>
+<hr />
+<h2 id="error-propagation-through-layers">Error Propagation Through Layers<a class="headerlink" href="#error-propagation-through-layers" title="Permanent link">&para;</a></h2>
+<p>Error flow follows this path:</p>
+<ol>
+<li>An error occurs in a service or repository</li>
+<li>The error propagates upward without modification</li>
+<li>The controller catches the error</li>
+<li>A global error handler:</li>
+<li>Classifies the error</li>
+<li>Formats the response</li>
+<li>Triggers logging</li>
+<li>A standardized response is returned to the client</li>
+</ol>
+<p>This ensures:</p>
+<ul>
+<li>Minimal error handling duplication</li>
+<li>Centralized error formatting</li>
+<li>Predictable behavior across modules</li>
+</ul>
+<hr />
+<h2 id="logging-observability">Logging &amp; Observability<a class="headerlink" href="#logging-observability" title="Permanent link">&para;</a></h2>
+<h3 id="logging-strategy">Logging Strategy<a class="headerlink" href="#logging-strategy" title="Permanent link">&para;</a></h3>
+<ul>
+<li>All errors are logged centrally</li>
+<li>Log level depends on error category:</li>
+<li>Validation / Auth errors → warning</li>
+<li>Business errors → info or warning</li>
+<li>System errors → error or critical</li>
+</ul>
+<h3 id="logged-information">Logged Information<a class="headerlink" href="#logged-information" title="Permanent link">&para;</a></h3>
+<p>Logs may include:</p>
+<ul>
+<li>Error code</li>
+<li>Error category</li>
+<li>Request identifier</li>
+<li>User identifier (if available)</li>
+<li>Stack trace (internal only)</li>
+</ul>
+<p>Sensitive data is never logged.</p>
+<hr />
+<h2 id="client-facing-vs-internal-errors">Client-Facing vs Internal Errors<a class="headerlink" href="#client-facing-vs-internal-errors" title="Permanent link">&para;</a></h2>
+<h3 id="client-facing-errors">Client-Facing Errors<a class="headerlink" href="#client-facing-errors" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Safe, minimal, and descriptive</li>
+<li>Do not expose stack traces or internal structure</li>
+<li>Use standardized messages and codes</li>
+</ul>
+<h3 id="internal-errors">Internal Errors<a class="headerlink" href="#internal-errors" title="Permanent link">&para;</a></h3>
+<ul>
+<li>May contain stack traces and debugging context</li>
+<li>Logged but never returned to clients</li>
+<li>Used for monitoring, alerting, and root cause analysis</li>
+</ul>
+<hr />
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>This error handling strategy ensures:</p>
+<ul>
+<li>Consistency across all services</li>
+<li>Clear responsibility boundaries</li>
+<li>Secure error exposure</li>
+<li>Strong observability</li>
+</ul>
+<p>By centralizing error handling and enforcing strict classification rules, the system remains robust, debuggable, and safe under both expected and unexpected failure conditions.</p>
 
 
 
@@ -3786,7 +4919,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "navigation.path", "search.suggest", "search.highlight", "content.code.copy", "content.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.path", "search.suggest", "search.highlight", "content.code.copy", "content.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>

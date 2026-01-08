@@ -2,82 +2,302 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://backend-collection.web.app/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
          <loc>https://backend-collection.web.app/changelog/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
          <loc>https://backend-collection.web.app/architecture/authentication-flow/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
          <loc>https://backend-collection.web.app/architecture/error-handling/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
          <loc>https://backend-collection.web.app/architecture/monolith-design/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
          <loc>https://backend-collection.web.app/architecture/overview/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/auth/database/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/auth/overview/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/auth/endpoints/POST-test-1/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/auth/endpoints/POST-test-2/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/auth/endpoints/POST-test-3/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/auth/endpoints/POST-test-4/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/inventory/database/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/inventory/overview/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/inventory/endpoints/POST-test-1/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/inventory/endpoints/POST-test-2/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/inventory/endpoints/POST-test-3/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/inventory/endpoints/POST-test-4/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/orders/database/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/orders/overview/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/orders/endpoints/POST-test-1/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/orders/endpoints/POST-test-2/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/orders/endpoints/POST-test-3/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/orders/endpoints/POST-test-4/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/products/database/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/products/overview/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/products/endpoints/POST-test-1/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/products/endpoints/POST-test-2/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/products/endpoints/POST-test-3/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/products/endpoints/POST-test-4/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/reports/database/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/reports/overview/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/reports/endpoints/POST-test-1/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/reports/endpoints/POST-test-2/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/reports/endpoints/POST-test-3/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/reports/endpoints/POST-test-4/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/suppliers/database/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/suppliers/overview/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/suppliers/endpoints/POST-test-1/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/suppliers/endpoints/POST-test-2/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/suppliers/endpoints/POST-test-3/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/suppliers/endpoints/POST-test-4/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/users/database/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/users/overview/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/users/endpoints/POST-test-1/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/users/endpoints/POST-test-2/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/users/endpoints/POST-test-3/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/services/users/endpoints/POST-test-4/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/tables/auth_credentials/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/tables/categories/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/tables/inventory_items/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/tables/inventory_transactions/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/tables/order_items/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/tables/orders/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/tables/product_categories/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/tables/products/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/tables/roles/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/tables/supplier_products/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/tables/suppliers/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/framework/tables/users/</loc>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
          <loc>https://backend-collection.web.app/performance/benchmarks/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
          <loc>https://backend-collection.web.app/performance/encryption/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
          <loc>https://backend-collection.web.app/performance/load-testing/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
          <loc>https://backend-collection.web.app/security/encryption/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
          <loc>https://backend-collection.web.app/security/jwt/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
          <loc>https://backend-collection.web.app/security/password-hashing/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
          <loc>https://backend-collection.web.app/security/role-permission/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
          <loc>https://backend-collection.web.app/setup/database-setup/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
-         <loc>https://backend-collection.web.app/setup/enviromental-variables/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <loc>https://backend-collection.web.app/setup/environment-variables/</loc>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
          <loc>https://backend-collection.web.app/setup/local-development/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
-         <loc>https://backend-collection.web.app/setup/running-test/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <loc>https://backend-collection.web.app/setup/running-tests/</loc>
+         <lastmod>2026-01-08</lastmod>
+    </url>
+    <url>
+         <loc>https://backend-collection.web.app/testing/encryption/</loc>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
          <loc>https://backend-collection.web.app/testing/integration-testing/</loc>
-         <lastmod>2026-01-07</lastmod>
-    </url>
-    <url>
-         <loc>https://backend-collection.web.app/testing/test-data/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-08</lastmod>
     </url>
     <url>
          <loc>https://backend-collection.web.app/testing/unit-testing/</loc>
-         <lastmod>2026-01-07</lastmod>
+         <lastmod>2026-01-08</lastmod>
     </url>
 </urlset>
